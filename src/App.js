@@ -1,9 +1,11 @@
 import './App.css';
+import LeftContainer from './LeftContainer';
+import RightImage from './RightImage';
 
 function App() {
   return (
     <div className='App'>
-      <header className='App-header'>hey</header>
+      <LeftContainer />
     </div>
   );
 }
