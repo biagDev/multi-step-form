@@ -2,7 +2,7 @@
 
 body {
   margin: 0;
-  padding: 0;
+
   background-color: #745e5e;
 }
 input[type='text'] {
@@ -11,7 +11,7 @@ input[type='text'] {
   background-color: #745e5e;
   border: none;
   border-bottom: 1px solid white;
-  width: 120%;
+  width: 100%;
   padding-bottom: 10px;
 }
 input[type='text']::placeholder {
@@ -21,31 +21,60 @@ input[type='text']::placeholder {
 .App {
   display: flex;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   font-family: Roboto;
 }
 .left-container {
   width: 50%;
-  height: 600px;
+  height: 100%;
   color: white;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.content-container {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 50%;
+.inner-left-container {
+  padding: 50px;
 }
-.content-container h2 {
-  font-size: 35px;
+.inner-left-container h2 {
+  font-size: 30px;
   padding: 20px 0;
 }
-.content-container button {
+.inner-left-container button {
   font-size: 16px;
   color: #745e5e;
   padding: 5px 15px;
 }
 .right-image {
   width: 50%;
-  height: 600px;
+  height: 100%;
+}
+.right-image > img {
+  height: 100%;
+  width: 100%;
+}
+.button-group {
+  margin-bottom: 70px;
+}
+.button-group button {
+  background-color: #745e5e;
+  color: white;
+  border: 0.5px solid white;
+  margin: 0 5px;
+  padding: 5px 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  .right-image {
+    display: none;
+  }
+  .left-container {
+    width: 100%;
+  }
+  .inner-left-container {
+    text-align: center;
+  }
+  input[type='text']::placeholder {
+    text-align: center;
+  }
 }
