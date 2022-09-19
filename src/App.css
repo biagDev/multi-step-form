@@ -1,3 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #745e5e;
+}
+input[type='text'] {
+  display: block;
+  margin: 20px 0;
+  background-color: #745e5e;
+  border: none;
+  border-bottom: 1px solid white;
+  width: 120%;
+  padding-bottom: 10px;
+}
+input[type='text']::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+}
 .App {
-  text-align: center;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  font-family: Roboto;
+}
+.left-container {
+  width: 50%;
+  height: 600px;
+  color: white;
+  position: relative;
+}
+.content-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50%;
+}
+.content-container h2 {
+  font-size: 35px;
+  padding: 20px 0;
+}
+.content-container button {
+  font-size: 16px;
+  color: #745e5e;
+  padding: 5px 15px;
+}
+.right-image {
+  width: 50%;
+  height: 600px;
 }
