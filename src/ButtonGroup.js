@@ -1,39 +1,24 @@
 import { useState } from 'react';
 
+const SELECTED_STYLES = {
+  backgroundColor: 'white',
+  color: '#745e5e',
+};
+
+const BUTTON_TEXT = ['$2k', '$5k', 'No Limit'];
+
 export default function ButtonGroup() {
   const [selectedButton, setSelectedButton] = useState(0);
   return (
     <div className='button-group'>
-      <button
-        style={
-          selectedButton === 1
-            ? { backgroundColor: 'white', color: '#745e5e' }
-            : null
-        }
-        onClick={() => setSelectedButton(1)}
-      >
-        $2k
-      </button>
-      <button
-        style={
-          selectedButton === 2
-            ? { backgroundColor: 'white', color: '#745e5e' }
-            : null
-        }
-        onClick={() => setSelectedButton(2)}
-      >
-        $5k
-      </button>
-      <button
-        style={
-          selectedButton === 3
-            ? { backgroundColor: 'white', color: '#745e5e' }
-            : null
-        }
-        onClick={() => setSelectedButton(3)}
-      >
-        No limit
-      </button>
+      {BUTTON_TEXT.map((txt, i) => (
+        <button
+          style={selectedButton === i ? SELECTED_STYLES : null}
+          onClick={() => setSelectedButton(i)}
+        >
+          {txt}
+        </button>
+      ))}
     </div>
   );
 }
